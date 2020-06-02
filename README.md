@@ -1,6 +1,7 @@
 # pemfile
 
 [![GoDoc](https://godoc.org/github.com/globalsign/pemfile?status.svg)](https://godoc.org/github.com/globalsign/pemfile)
+[![Build Status](https://travis-ci.org/globalsign/pemfile.svg?branch=master)](https://travis-ci.org/globalsign/pemfile)
 
 Package pemfile contains functions for reading/writing common PKI objects
 from/to PEM-encoded files.
