@@ -44,7 +44,7 @@ func ReadPrivateKey(filename string) (interface{}, error) {
 }
 
 // ReadPrivateKeyWithPasswordFunc reads a single private key which may be in
-// an encrypted PEM block. If it is, decryption is attemped with a password
+// an encrypted PEM block. If it is, decryption is attempted with a password
 // returned by the provided function. The two arguments to the function are
 // a description of the type of credential (e.g. "password", "PIN") and a
 // description of the target of the credential (e.g. "private key", "HSM").
