@@ -1,7 +1,7 @@
 # pemfile
 
 [![GoDoc](https://godoc.org/github.com/globalsign/pemfile?status.svg)](https://godoc.org/github.com/globalsign/pemfile)
-[![Build Status](https://travis-ci.org/globalsign/pemfile.svg?branch=master)](https://travis-ci.org/globalsign/pemfile)
+[![Build Status](https://github.com/globalsign/pemfile/actions/workflows/go.yml/badge.svg)
 [![Go Report Card](https://goreportcard.com/badge/github.com/globalsign/pemfile)](https://goreportcard.com/report/github.com/globalsign/pemfile)
 
 Package pemfile contains functions for reading/writing common PKI objects
@@ -9,7 +9,7 @@ from/to PEM-encoded files.
 
 ## Install
 
-    go get -u github.com/globalsign/pemfile
+    go get github.com/globalsign/pemfile
 
 ## License
 
