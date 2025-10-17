@@ -1,4 +1,4 @@
-module github.com/globalsign/pemfile
+module github.com/jenkinsjamesb/pemfile
 
 go 1.13
 
