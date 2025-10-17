@@ -119,6 +119,9 @@ func parsePrivateKeyBlock(block *pem.Block) (interface{}, error) {
 	case pkcs8PrivateKeyPEMType:
 		key, err = x509.ParsePKCS8PrivateKey(block.Bytes)
 
+	case encryptedPrivateKeyPEMType:
+		key, err = x509.ParsePKCS8PrivateKey(block.Bytes)
+
 	case pkcs1PrivateKeyPEMType:
 		key, err = x509.ParsePKCS1PrivateKey(block.Bytes)
 
