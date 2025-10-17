@@ -30,6 +30,7 @@ const (
 	ecPrivateKeyPEMType    = "EC PRIVATE KEY"
 	pkixPublicKeyPEMType   = "PUBLIC KEY"
 	pkcs1PublicKeyPEMType  = "RSA PUBLIC KEY"
+	encryptedPrivateKeyPEMType = "ENCRYPTED PRIVATE KEY"
 )
 
 // ReadPrivateKey reads a single private key. PKCS1 RSA private keys, SEC1 EC
@@ -114,7 +115,7 @@ func ReadPublicKey(filename string) (interface{}, error) {
 
 // parsePrivateKeyBlock parses a private key in an (unencrypted) PEM block.
 func parsePrivateKeyBlock(block *pem.Block) (interface{}, error) {
-	err := IsType(block, pkcs8PrivateKeyPEMType, pkcs1PrivateKeyPEMType, ecPrivateKeyPEMType)
+	err := IsType(block, pkcs8PrivateKeyPEMType, pkcs1PrivateKeyPEMType, ecPrivateKeyPEMType, encryptedPrivateKeyPEMType)
 	if err != nil {
 		return nil, err
 	}
