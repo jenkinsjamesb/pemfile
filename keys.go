@@ -58,10 +58,7 @@ func ReadPrivateKeyWithPasswordFunc(filename string, pwfunc func(string, string)
 		return nil, err
 	}
 
-	fmt.Errorf("Read block OK")
-
 	if x509.IsEncryptedPEMBlock(block) {
-		fmt.Errorf("Is encrypted OK")
 		if pwfunc == nil {
 			pwfunc = passwordFromTerminal
 		}
@@ -71,14 +68,10 @@ func ReadPrivateKeyWithPasswordFunc(filename string, pwfunc func(string, string)
 			return nil, err
 		}
 
-		fmt.Errorf("Password get OK")
-
 		block.Bytes, err = x509.DecryptPEMBlock(block, pass)
 		if err != nil {
 			return nil, fmt.Errorf("failed to decrypt PEM block: %w", err)
 		}
-
-		fmt.Errorf("Decrypt block OK")
 	}
 
 	return parsePrivateKeyBlock(block)
