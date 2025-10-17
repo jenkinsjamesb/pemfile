@@ -54,6 +54,7 @@ func ReadPrivateKey(filename string) (interface{}, error) {
 func ReadPrivateKeyWithPasswordFunc(filename string, pwfunc func(string, string) ([]byte, error)) (interface{}, error) {
 	block, err := ReadBlock(filename)
 	if err != nil {
+		fmt.Println("Read block error")
 		return nil, err
 	}
 
